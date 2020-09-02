@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DemoMaterialModule} from './material-module';
 
 
 
@@ -34,7 +36,10 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
      // Remove it when a real server is ready to receive requests.
      HttpClientInMemoryWebApiModule.forRoot(
        InMemoryDataService, { dataEncapsulation: false }
-     )
+     ),
+
+     BrowserAnimationsModule,
+     DemoMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

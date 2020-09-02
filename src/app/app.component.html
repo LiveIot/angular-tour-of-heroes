@@ -1,7 +1,25 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
+<p>
+  <mat-toolbar color="primary" 
+  >
+    <mat-toolbar-row class="mat-elevation-z6 tbar">
+      <button mat-button>
+        <mat-icon>star</mat-icon>
+        {{title}}
+    </button> 
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>link</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+      <div class="example-button-row">
+        <button routerLink="/dashboard" mat-button>Dashboard </button>
+        <button routerLink="/heroes" mat-button>Heroes</button>
+      </div>
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+</p>
 <router-outlet></router-outlet>
 <app-messages></app-messages>
